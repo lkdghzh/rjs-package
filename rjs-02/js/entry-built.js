@@ -1,1 +1,1 @@
-define("a",[],function(){return"a"}),define("b",[],function(){return"b"}),define("c",[],function(){return"c"}),require(["a","b","c"],function(n,e,i){alert(n+e+i)}),define("entry",function(){});
+define("sub/c",[],function(){return{fora:"c1",forb:"c2"}}),define("a",["sub/c"],function(n){return"（a"+n.fora+"）"}),define("b",["a"],function(n){return"（b"+n+"）"}),require(["b","sub/c"],function(n,e){console.log(n+e.forb)}),define("entry",function(){});

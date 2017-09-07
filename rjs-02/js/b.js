@@ -1,6 +1,6 @@
 
 define(['a'],function(a){
-    return 'b'+a
+    return '（b'+a+'）'
 })
 
 // define(['sub/c','a'],function(c,a){

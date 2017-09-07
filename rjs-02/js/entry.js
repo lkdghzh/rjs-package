@@ -1,4 +1,4 @@
 
-require(["b"], function (b) {
-    alert(b)
+require(["b",'sub/c'], function (b,c) {
+  console.log(b+c.forb)
 });

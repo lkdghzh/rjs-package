@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>r.js打包</title>
+    <script data-main='./js/entry-built.js' src="./js/require.js"></script>
+</head>
+
+<body>
+  
+</body>
+<pre>1，结果：（b（ac1））c2</pre>
+
+<pre>2，打包过程 node r.js -o build.js</pre>
+<img src="img/package-progress.png" alt="">
+<pre>3，打包结果</pre>
+<pre>
+define("sub/c",[],function(){return{fora:"c1",forb:"c2"}}),
+define("a",["sub/c"],function(n){return"（a"+n.fora+"）"}),
+define("b",["a"],function(n){return"（b"+n+"）"}),
+require(["b","sub/c"],function(n,e){console.log(n+e.forb)}),
+define("entry",function(){});
+</pre>
+<pre>4，打包网络加载</pre>
+<img src="img/package-network.png" alt="">
+
+
+</html>
