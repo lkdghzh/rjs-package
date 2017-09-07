@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>r.js打包</title>
+    <script data-main='./js/entry.js' src="./js/require.js"></script>
+</head>
+
+<body>
+    <pre>
+//a是在entry之后加载的
+require(["a"], function (a) {
+    console.log(a)
+});
+    </pre>
+    <img src="img/require-network.png" alt="">
+</body>
+
+</html>
