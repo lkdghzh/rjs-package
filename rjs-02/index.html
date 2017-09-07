@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>r.js打包</title>
+    <script data-main='./js/entry.js' src="./js/require.js"></script>
+</head>
+
+<body>
+  
+</body>
+<pre>
+b引入a，c
+a引入c
+c不会被加载2次
+
+引入的文件（[]中路径文件），谁先加载好，就加载谁，没有先后顺序
+define(['a','sub/c'],function(a,c){
+    return 'b'+a+c.forb
+})
+
+// define(['sub/c','a'],function(c,a){
+//     return 'b'+a+c.forb
+// })
+
+</pre>
+<img src="./img/result.png" alt="">
+<img src="./img/result-2.png" alt="">
+
+
+</html>
